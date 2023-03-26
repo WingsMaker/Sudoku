@@ -9,6 +9,7 @@ function initActions() {
 
     if (isFirstTime) {
         let submitButton = document.querySelector('#header__submit > span')
+		let homemenuButton = document.querySelector('#homemenu')
         let body = document.querySelector('body')
         let startButton = document.querySelector('#start')
         let home__options = document.querySelectorAll('.selection .options span')
@@ -17,11 +18,17 @@ function initActions() {
         body.addEventListener('keyup', keyUpHandler)
         startButton.addEventListener('click', startHandler)
         home__options.forEach(x => x.addEventListener('click', homeOptionsHandler))
+		homemenuButton.addEventListener('click', homemenuItemHandler)
 
         isFirstTime = false;
     }
 
     let selection;
+
+    function homemenuItemHandler() {
+		window.location.reload()
+    }
+	
 
     function emptyItemHandler() {
         emptyItems.forEach(x => x.classList.remove('selected'))
