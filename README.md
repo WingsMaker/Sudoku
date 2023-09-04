@@ -7,6 +7,8 @@ Hard - 50 games
 
 Devil - 95 games
 
+150 over puzzles
+
 
 Direct link
 
